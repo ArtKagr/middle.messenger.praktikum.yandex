@@ -1,4 +1,4 @@
-import {sum} from './modules/sum';
+import block from './components/block/index'
 
 const root = document.querySelector('#root');
-root.textContent = sum(6, -1).toString();
+root.innerHTML = block;

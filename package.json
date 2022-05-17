@@ -10,7 +10,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-modules": "^4.3.1"
+  },
   "devDependencies": {
     "parcel": "^2.3.2"
   }
