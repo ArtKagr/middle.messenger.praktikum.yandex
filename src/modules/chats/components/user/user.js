@@ -1,6 +1,6 @@
 import Templator from "../../../../utils/templator";
-import userTemplate from './user.tmpl';
+import { userSettings, user } from './user.tmpl';
 
-const tmpl = new Templator(userTemplate);
 
-export default tmpl
+export const renderedUser = new Templator(user);
+export const renderedUserSettings = new Templator(userSettings);

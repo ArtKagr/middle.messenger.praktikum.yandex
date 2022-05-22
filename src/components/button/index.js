@@ -8,7 +8,7 @@ const regButtonContext = { className: 'auth-button', text: 'ВХОД' };
 const regButtonFakeContext = { className: 'auth-button', linkName: '/', targetName: '', text: 'ЗАРЕГИСТРИРОВАТЬСЯ' };
 
 const goToChatsButtonContext = { className: 'auth-button', text: 'НАЗАД К ЧАТАМ' };
-const goToChatsButtonFakeContext = { className: 'auth-button', linkName: '/chats', targetName: '', text: 'НАЗАД К ЧАТАМ' };
+const goToChatsButtonFakeContext = { className: 'auth-button notFound', linkName: '/chats', targetName: '', text: 'НАЗАД К ЧАТАМ' };
 
 
 export const authButton = renderedButton.compile(authButtonContext)

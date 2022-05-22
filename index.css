@@ -1,10 +1,13 @@
-@import 'src/components/input/input.css';
-@import 'src/components/title/title.css';
-@import 'src/components/button/button.css';
-@import 'src/components/link/link.css';
-@import 'src/components/wrapper/wrapper.css';
-@import 'src/layout/main/main.css';
-@import 'src/modules/chats/components/user/user.css';
+@import 'assets/styles/components/input.css';
+@import 'assets/styles/components/title.css';
+@import 'assets/styles/components/button.css';
+@import 'assets/styles/components/link.css';
+@import 'assets/styles/pages/chats.css';
+@import 'assets/styles/layout/main.css';
+@import 'assets/styles/layout/form.css';
+@import 'assets/styles/modules/user.css';
+@import 'assets/styles/modules/header.css';
+@import 'assets/styles/modules/messageField.css';
 
 @font-face {
     font-family: Roboto-Regular;
@@ -12,7 +15,12 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: 3px;
+    background-color: #f9f9fd;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(196, 196, 196, 0.5);
 }
 
 html {
@@ -21,10 +29,4 @@ html {
 
 body {
     margin: 0;
-}
-
-#root {
-    display: flex;
-    width: 100%;
-    height: 100vh;
 }

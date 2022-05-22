@@ -1,219 +1,38 @@
-import renderedUser from './user';
+import { renderedUser, renderedUserSettings } from './user';
+import { state } from '../../../../store/index'
 
 const userSettingsContext = {
-    userClassName: 'chats-wrapper-menu-settings-user_settings',
+    userClassName: 'chats-menu-settings-user_settings',
     avatarClassName: 'user-avatar',
-    contentClassName: 'chats-wrapper-menu-settings-user-content',
+    contentClassName: 'chats-menu-settings-user-content',
     contentTitleClassName: 'user-title',
     contentTitleText: 'Иван Иванов',
     contentMessageClassName: 'user-message',
     contentMessageText: '+7 (909) 967 30 30',
-    infoClassName: '',
-    infoTimeClassName: '',
-    infoTimeText: '',
-    infoNewMessageClassName: '',
-    infoNewMessageText: ''
+    userClassSettings: 'user-settings'
 }
 
-const usersArrayContext = [
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
+const usersContext = state.users.map((user) => {
+    return {
+        userClassName: `chats-menu-settings-user ${state.activeUser === user.id ? '-active' : ''}`,
         avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
+        contentClassName: 'chats-menu-settings-user-content',
         contentTitleClassName: 'user-title',
-        contentTitleText: 'Кондрат',
+        contentTitleText: user.name,
         contentMessageClassName: 'user-message',
-        contentMessageText: 'Ты чего?',
+        contentMessageText: user.message,
         infoClassName: 'flex-column-wrapper',
         infoTimeClassName: 'user-time',
-        infoTimeText: '21:13',
-        infoNewMessageClassName: 'user-new-message',
-        infoNewMessageText: '1'
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Frontend news',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Друзья, мы запускаем новую версию продукта',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '20:01',
-        infoNewMessageClassName: 'user-new-message',
-        infoNewMessageText: '4'
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Daily M',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Почему вы ещё не создали свою версию',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '19:55',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Встреча выпускников',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Евгений: а может под мост?',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '16:01',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Андрей',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Завтра всё в силе?',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '14:02',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'ЯжДизайнер',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Т-текстуры',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '13:00',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Кто-то очень умный',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'А как вы хотели',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '12:52',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Английский язык',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Время пришло',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '10:13',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Job for Middle',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Ищем миддла в команду',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '09:50',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Андрей',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Завтра всё в силе?',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '10:13',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'ЯжДизайнер',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Т-текстуры',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '12:52',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Кто-то очень умный',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'А как вы хотели',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '13:00',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Английский язык',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'Время пришло',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '14:02',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
-    },
-    {
-        userClassName: 'chats-wrapper-menu-settings-user',
-        avatarClassName: 'user-avatar',
-        contentClassName: 'chats-wrapper-menu-settings-user-content',
-        contentTitleClassName: 'user-title',
-        contentTitleText: 'Тёща',
-        contentMessageClassName: 'user-message',
-        contentMessageText: 'А я же говорила...',
-        infoClassName: 'flex-column-wrapper',
-        infoTimeClassName: 'user-time',
-        infoTimeText: '16:01',
-        infoNewMessageClassName: '',
-        infoNewMessageText: ''
+        infoTimeText: user.wasOnline,
+        infoNewMessageClassName: `${user.newMessage ? 'user-new_message' : ''}`,
+        infoNewMessageText: user.newMessage,
+        clickHandler: function ($event) {
+            console.warn($event)
+            console.warn('userClicked', user)
+        }
     }
-]
+})
 
-export const userSettings = renderedUser.compile(userSettingsContext);
-export const usersArray = renderedUser.compileArray(usersArrayContext)
+export const userSettings = renderedUserSettings.compile(userSettingsContext);
+export const usersArray = renderedUser.compileArray(usersContext)
 

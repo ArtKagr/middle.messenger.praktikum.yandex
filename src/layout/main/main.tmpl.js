@@ -1,3 +1,3 @@
 export default `
-    <div class={{ className }}></div>
+    <div class="{{ className }}"></div>
 `

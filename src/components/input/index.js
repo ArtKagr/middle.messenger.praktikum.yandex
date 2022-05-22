@@ -1,18 +1,20 @@
 import renderedInput from '../input/input';
+import { state } from "../../store";
 
 const authInputsContext = [
-    { inputClass: 'chats-input', inputValue: 'ivan@example.com', inputPlaceholder: 'E-mail', inputType: 'email' },
-    { inputClass: 'chats-input', inputValue: '1234567890', inputPlaceholder: 'Пароль', inputType: 'password' }
+    { inputClass: 'chats-input', inputValue: state.settings.auth.login, inputPlaceholder: 'E-mail', inputType: 'email' },
+    { inputClass: 'chats-input', inputValue: state.settings.auth.password, inputPlaceholder: 'Пароль', inputType: 'password' }
 ];
 
 const regInputsContext = [
-    { inputClass: 'chats-input', inputValue: 'ivan@example.com', inputPlaceholder: 'E-mail', inputType: 'email' },
-    { inputClass: 'chats-input', inputValue: 'ivanivanov', inputPlaceholder: 'Логин', inputType: 'text' },
-    { inputClass: 'chats-input', inputValue: 'Иван', inputPlaceholder: 'Имя', inputType: 'text' },
-    { inputClass: 'chats-input', inputValue: 'Иванов', inputPlaceholder: 'Фамилия', inputType: 'text' },
-    { inputClass: 'chats-input', inputValue: '+79099673030', inputPlaceholder: 'Телефон', inputType: 'text' },
-    { inputClass: 'chats-input', inputValue: '1234567890', inputPlaceholder: 'Пароль', inputType: 'password' },
-    { inputClass: 'chats-input', inputValue: '1234567890', inputPlaceholder: 'Повторите пароль', inputType: 'password' }
+    { inputClass: 'chats-input', inputValue: state.settings.registration.email, inputPlaceholder: 'E-mail', inputType: 'email' },
+    { inputClass: 'chats-input', inputValue: state.settings.registration.login, inputPlaceholder: 'Логин', inputType: 'text' },
+    { inputClass: 'chats-input', inputValue: state.settings.registration.first_name, inputPlaceholder: 'Имя', inputType: 'text' },
+    { inputClass: 'chats-input', inputValue: state.settings.registration.second_name, inputPlaceholder: 'Фамилия', inputType: 'text' },
+    { inputClass: 'chats-input', inputValue: state.settings.registration.display_name, inputPlaceholder: 'Отображаемое имя', inputType: 'text' },
+    { inputClass: 'chats-input', inputValue: state.settings.registration.phone, inputPlaceholder: 'Телефон', inputType: 'text' },
+    { inputClass: 'chats-input', inputValue: state.settings.registration.password, inputPlaceholder: 'Пароль', inputType: 'password' },
+    { inputClass: 'chats-input', inputValue: state.settings.registration.repeat_password, inputPlaceholder: 'Повторите пароль', inputType: 'password' }
 ];
 
 const searchInputContext = { inputClass: 'chats-input-search', inputValue: '', inputPlaceholder: 'Поиск', inputType: 'text' }

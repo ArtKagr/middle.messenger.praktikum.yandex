@@ -12,10 +12,7 @@ export default class Templator {
     }
 
     compileArray(array) {
-        return array.reduce((preVal, ctx) => {
-            preVal = preVal.concat(this._compileTemplate(ctx))
-            return preVal
-        }, '')
+        return array.reduce((preVal, ctx) => preVal.concat(this._compileTemplate(ctx)), '')
     }
 
     _compileTemplate(ctx) {
@@ -24,9 +21,10 @@ export default class Templator {
         tmpl.match(this.VALUE_TEMPLATE_REGEXP).forEach((value) => {
             const clearedValue = value.replace(/[{}\s]/gi, '')
             const data = get(ctx, clearedValue)
-            const changedData = typeof data === "function" ? `window.${clearedValue}()` : data
+            const isFunction = typeof data === "function"
+            const changedData = isFunction ? `window.${clearedValue}()` : data
 
-            if (typeof data === "function") {
+            if (isFunction) {
                 window[clearedValue] = data;
             }
 
