@@ -1,6 +1,6 @@
-import Templator from "../../../../utils/templator";
-import messageHeaderTemplate from './messageHeader.tmpl';
+import Templator from "../../../../utils/templator.js";
+import messageHeaderTemplate from './messageHeader.tmpl.js';
 
 const tmpl = new Templator(messageHeaderTemplate);
 
-export default tmpl
+export default tmpl;

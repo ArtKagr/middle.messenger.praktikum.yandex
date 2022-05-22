@@ -1,6 +1,6 @@
-import Templator from "../../utils/templator";
-import buttonTemplate from "./button.tmpl";
+import Templator from "../../utils/templator.js";
+import buttonTemplate from "./button.tmpl.js";
 
 const tmpl = new Templator(buttonTemplate);
 
-export default tmpl
+export default tmpl;

@@ -33,5 +33,7 @@ export const state = {
         { id: 10, name: 'Кто-то очень умный', message: 'А как вы хотели', newMessage: '', wasOnline: '21:13' },
         { id: 11, name: 'Английский язык', message: 'Время пришло', newMessage: '', wasOnline: '21:13' },
         { id: 12, name: 'Тёща', message: 'А я же говорила...', newMessage: '', wasOnline: '21:13' },
+        { id: 13, name: 'Английский язык', message: 'Время пришло', newMessage: '', wasOnline: '21:13' },
+        { id: 14, name: 'Тёща', message: 'А я же говорила...', newMessage: '', wasOnline: '21:13' }
     ]
 }

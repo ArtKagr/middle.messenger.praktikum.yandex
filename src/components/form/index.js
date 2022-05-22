@@ -1,4 +1,4 @@
-import renderedForm from "./form";
+import renderedForm from "./form.js";
 
 const formContext = {
     className: 'form',

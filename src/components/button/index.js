@@ -1,5 +1,5 @@
-import renderedButton from './button'
-import renderedLink from '../link/link'
+import renderedButton from './button.js';
+import renderedLink from '../link/link.js';
 
 const authButtonContext = { className: 'auth-button', text: 'ВХОД' };
 const authButtonFakeContext = { className: 'auth-button', linkName: '/chats', targetName: '', text: 'ВХОД' };
@@ -11,11 +11,11 @@ const goToChatsButtonContext = { className: 'auth-button', text: 'НАЗАД К 
 const goToChatsButtonFakeContext = { className: 'auth-button notFound', linkName: '/chats', targetName: '', text: 'НАЗАД К ЧАТАМ' };
 
 
-export const authButton = renderedButton.compile(authButtonContext)
-export const authButtonFake = renderedLink.compile(authButtonFakeContext)
+export const authButton = renderedButton.compile(authButtonContext);
+export const authButtonFake = renderedLink.compile(authButtonFakeContext);
 
-export const regButton = renderedButton.compile(regButtonContext)
-export const regButtonFake = renderedLink.compile(regButtonFakeContext)
+export const regButton = renderedButton.compile(regButtonContext);
+export const regButtonFake = renderedLink.compile(regButtonFakeContext);
 
-export const goToChatsButton = renderedLink.compile(goToChatsButtonContext)
-export const goToChatsButtonFake = renderedLink.compile(goToChatsButtonFakeContext)
+export const goToChatsButton = renderedLink.compile(goToChatsButtonContext);
+export const goToChatsButtonFake = renderedLink.compile(goToChatsButtonFakeContext);

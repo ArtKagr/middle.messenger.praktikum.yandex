@@ -1,4 +1,4 @@
-import renderedMessageHeader from './messageHeader'
+import renderedMessageHeader from './messageHeader.js';
 
 const context = {
     messageHeader: 'message-header',
@@ -8,6 +8,6 @@ const context = {
     messageHeaderContentMessage: 'message-header-content-message',
     messageHeaderContentMessageText: '35 минут',
     messageHeaderMenu: 'message-header-menu'
-}
+};
 
-export default renderedMessageHeader.compile(context)
+export default renderedMessageHeader.compile(context);

@@ -10,4 +10,4 @@ export default `
             </svg>
         </div>
     </div>
-`
+`;

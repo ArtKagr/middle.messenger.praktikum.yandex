@@ -1,6 +1,6 @@
-import Templator from "../../../../utils/templator";
-import messageFieldTemplate from './messageField.tmpl';
+import Templator from "../../../../utils/templator.js";
+import messageFieldTemplate from './messageField.tmpl.js';
 
 const tmpl = new Templator(messageFieldTemplate);
 
-export default tmpl
+export default tmpl;

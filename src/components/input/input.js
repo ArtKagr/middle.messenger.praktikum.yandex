@@ -1,6 +1,6 @@
-import Templator from "../../utils/templator";
-import inputTemplate from "./input.tmpl";
+import Templator from "../../utils/templator.js";
+import inputTemplate from "./input.tmpl.js";
 
 const tmpl = new Templator(inputTemplate);
 
-export default tmpl
+export default tmpl;

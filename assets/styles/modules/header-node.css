@@ -1,0 +1,35 @@
+.message-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(197, 202, 233, 0.2);
+    width: 100%;
+}
+
+    .message-header-content {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .message-header-content-title {
+           color: #212121;
+           -webkit-user-select: none;
+              -moz-user-select: none;
+               -ms-user-select: none;
+                   user-select: none;
+        }
+
+    .message-header-content-message {
+           font-size: 14px;
+           color: #757575;
+           -webkit-user-select: none;
+              -moz-user-select: none;
+               -ms-user-select: none;
+                   user-select: none;
+        }
+
+    .message-header-menu {
+        cursor: pointer;
+    }

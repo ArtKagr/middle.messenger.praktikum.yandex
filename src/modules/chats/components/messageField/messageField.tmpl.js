@@ -5,4 +5,4 @@ export default `<div class="{{ messageField }}">
         </svg>
     </div>
     <input class="{{ messageFieldInput }}" placeholder="{{ messageFieldPlaceholder }}">
-</div>`
+</div>`;

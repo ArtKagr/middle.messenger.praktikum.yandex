@@ -1,3 +1,1 @@
-export default `
-    <button class={{ className }}>{{ text }}</button>
-`
+export default `<button class={{ className }}>{{ text }}</button>`;

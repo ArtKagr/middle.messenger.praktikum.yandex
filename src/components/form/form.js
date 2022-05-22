@@ -1,6 +1,6 @@
-import Templator from "../../utils/templator";
-import formTemplate from './form.tmpl';
+import Templator from "../../utils/templator.js";
+import formTemplate from './form.tmpl.js';
 
 const tmpl = new Templator(formTemplate);
 
-export default tmpl
+export default tmpl;

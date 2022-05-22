@@ -1,4 +1,4 @@
-import renderedTextData from './title';
+import renderedTextData from './title.js';
 
 const context = {
     title: {

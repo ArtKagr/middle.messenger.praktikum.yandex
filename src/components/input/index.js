@@ -1,5 +1,5 @@
-import renderedInput from '../input/input';
-import { state } from "../../store";
+import renderedInput from '../input/input.js';
+import { state } from "../../../store/index.js";
 
 const authInputsContext = [
     { inputClass: 'chats-input', inputValue: state.settings.auth.login, inputPlaceholder: 'E-mail', inputType: 'email' },

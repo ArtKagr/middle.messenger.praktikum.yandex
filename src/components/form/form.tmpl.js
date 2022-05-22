@@ -1,1 +1,1 @@
-export default `<form class="{{ className }}" action="{{ formHandler }}"></form>`
+export default `<form class="{{ className }}" action="{{ formHandler }}"></form>`;

@@ -1,5 +1,5 @@
-import { renderedUser, renderedUserSettings } from './user';
-import { state } from '../../../../store/index'
+import { renderedUser, renderedUserSettings } from './user.js';
+import { state } from '../../../../../store/index.js';
 
 const userSettingsContext = {
     userClassName: 'chats-menu-settings-user_settings',
@@ -10,7 +10,7 @@ const userSettingsContext = {
     contentMessageClassName: 'user-message',
     contentMessageText: '+7 (909) 967 30 30',
     userClassSettings: 'user-settings'
-}
+};
 
 const usersContext = state.users.map((user) => {
     return {
@@ -26,13 +26,12 @@ const usersContext = state.users.map((user) => {
         infoTimeText: user.wasOnline,
         infoNewMessageClassName: `${user.newMessage ? 'user-new_message' : ''}`,
         infoNewMessageText: user.newMessage,
-        clickHandler: function ($event) {
-            console.warn($event)
+        clickHandler: function () {
             console.warn('userClicked', user)
         }
     }
-})
+});
 
 export const userSettings = renderedUserSettings.compile(userSettingsContext);
-export const usersArray = renderedUser.compileArray(usersContext)
+export const usersArray = renderedUser.compileArray(usersContext);
 

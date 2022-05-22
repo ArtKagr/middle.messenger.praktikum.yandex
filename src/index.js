@@ -1,15 +1,15 @@
-import layout from './layout/main/index';
+import layout from "./layout/main/index.js";
 
-import chatsPage from './pages/chats/index';
-import { userSettings, usersArray } from "./modules/chats/components/user/index";
-import messageHeader from './modules/chats/components/messageHeader/index';
-import messageField from "./modules/chats/components/messageField/index";
+import chatsPage from "./pages/chats/index.js";
+import { userSettings, usersArray } from "./modules/chats/components/user/index.js";
+import messageHeader from "./modules/chats/components/messageHeader/index.js";
+import messageField from "./modules/chats/components/messageField/index.js";
 
-import { authInputs, regInputs, searchInput } from "./components/input";
-import { authButtonFake, regButtonFake, goToChatsButtonFake } from "./components/button";
-import { title, subtitle } from './components/title';
-import { authLink, regLink } from "./components/link";
-import form from './components/form/index';
+import { authInputs, regInputs, searchInput } from "./components/input/index.js";
+import { authButtonFake, regButtonFake, goToChatsButtonFake } from "./components/button/index.js";
+import { title, subtitle } from "./components/title/index.js";
+import { authLink, regLink } from "./components/link/index.js";
+import form from "./components/form/index.js";
 
 
 const root = document.querySelector('#root');
