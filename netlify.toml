@@ -7,4 +7,3 @@
 
 [build]
   publish = "dist"
-  command = "parcel build index.html"
