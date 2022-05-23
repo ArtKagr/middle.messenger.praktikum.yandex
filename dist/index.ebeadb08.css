@@ -1,0 +1,29 @@
+@import './components/input.css';
+@import './components/title.css';
+@import './components/button.css';
+@import './components/link.css';
+@import './components/form.css';
+@import './pages/chats.css';
+@import './layout/main.css';
+@import './modules/user.css';
+@import './modules/header.css';
+@import './modules/messageField.css';
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+html {
+    font-family: 'Roboto-Regular', sans-serif;
+}
+body {
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: #f9f9fd;
+}
+::-webkit-scrollbar-thumb {
+        background-color: rgba(196, 196, 196, 0.5);
+    }
+
+/*# sourceMappingURL=index.ebeadb08.css.map */
