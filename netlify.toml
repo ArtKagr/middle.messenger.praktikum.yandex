@@ -7,6 +7,3 @@
 
 [build]
   publish = "dist"
-[[plugins]]
-  package = "@parcel/config-default"
-  package = "@parcel/transformer-css"
