@@ -1,7 +1,7 @@
-import {get} from "./get";
+import { get } from './get';
 
 export default class Templator {
-    TEMPLATE_REGEXP = /\{\{(.*?)\}\}/gi;
+    VALUE_TEMPLATE_REGEXP = /\{\{(.*?)\}\}/gi;
 
     constructor(template) {
         this._template = template;
@@ -11,27 +11,25 @@ export default class Templator {
         return this._compileTemplate(ctx);
     }
 
+    compileArray(array) {
+        return array.reduce((preVal, ctx) => preVal.concat(this._compileTemplate(ctx)), '')
+    }
+
     _compileTemplate(ctx) {
         let tmpl = this._template;
-        let key = null;
-        const regExp = this.TEMPLATE_REGEXP;
 
+        tmpl.match(this.VALUE_TEMPLATE_REGEXP).forEach((value) => {
+            const clearedValue = value.replace(/[{}\s]/gi, '')
+            const data = get(ctx, clearedValue)
+            const isFunction = typeof data === "function"
+            const changedData = isFunction ? `window.${clearedValue}()` : data
 
-        while ((key = regExp.exec(tmpl))) {
-            console.warn(key)
-            if (key[1]) {
-                const tmplValue = key[1].trim();
-                const data = get(ctx, tmplValue);
-
-                if (typeof data === "function") {
-                    window[tmplValue] = data;
-                    tmpl = tmpl.replace(new RegExp(key[0], "gi"), `window.${key[1].trim()}()`);
-                    continue;
-                }
-
-                tmpl = tmpl.replace(new RegExp(key[0], "gi"), data)
+            if (isFunction) {
+                window[clearedValue] = data;
             }
-        }
+
+            tmpl = tmpl.replace(new RegExp(value, "gi"), changedData)
+        })
 
         return tmpl;
     }
