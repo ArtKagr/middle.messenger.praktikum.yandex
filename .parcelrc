@@ -1,5 +1,4 @@
 {
-  "bundler": "@parcel/bundler-default",
   "transformers": {
     "*.css": ["@parcel/transformer-css"]
   }
