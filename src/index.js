@@ -11,7 +11,7 @@ import form from './components/form/index';
 
 
 const root = document.querySelector('#root');
-
+console.warn(location)
 switch (location.pathname) {
     case '/':
         root.innerHTML = layout.flex;
