@@ -1,5 +1,5 @@
 {
-  "extends": "@parcel/config-default",
+  "bundler": "@parcel/bundler-default",
   "transformers": {
     "*.css": ["@parcel/transformer-css"]
   }
