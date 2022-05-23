@@ -1,6 +1,6 @@
 {
   "extends": "@parcel/config-default",
   "transformers": {
-    "@parcel/transformer-css": ["nesting"]
+    "@parcel/transformer-css": ["parcel-transformer-css"]
   }
 }
