@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: Roboto-Regular;
-    src: url(../fonts/Roboto-Regular.ttf);
+    src: url(src/fonts/Roboto-Regular.ttf);
 }
 
 html {
