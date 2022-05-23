@@ -543,7 +543,6 @@ var _index8 = require("./components/link/index");
 var _index9 = require("./components/form/index");
 var _indexDefault4 = parcelHelpers.interopDefault(_index9);
 const root = document.querySelector('#root');
-console.warn(location);
 switch(location.pathname){
     case '/':
         root.innerHTML = _indexDefault.default.flex;
