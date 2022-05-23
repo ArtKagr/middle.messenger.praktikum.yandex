@@ -1,13 +1,13 @@
-@import './components/input.css';
-@import './components/title.css';
-@import './components/button.css';
-@import './components/link.css';
-@import './components/form.css';
-@import './pages/chats.css';
-@import './layout/main.css';
-@import './modules/user.css';
-@import './modules/header.css';
-@import './modules/messageField.css';
+@import 'src/styles/components/input.css';
+@import 'src/styles/components/title.css';
+@import 'src/styles/components/button.css';
+@import 'src/styles/components/link.css';
+@import 'src/styles/components/form.css';
+@import 'src/styles/pages/chats.css';
+@import 'src/styles/layout/main.css';
+@import 'src/styles/modules/user.css';
+@import 'src/styles/modules/header.css';
+@import 'src/styles/modules/messageField.css';
 
 @font-face {
     font-family: Roboto-Regular;
