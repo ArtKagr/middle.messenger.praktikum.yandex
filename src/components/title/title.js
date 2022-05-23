@@ -1,5 +1,5 @@
-import Templator from "../../utils/templator.js";
-import textData from './title.tmpl.js';
+import Templator from '../../utils/templator';
+import textData from './title.tmpl';
 
 export default {
     pageTitle: new Templator(textData.pageTitle),

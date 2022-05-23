@@ -1,5 +1,5 @@
-import Templator from "../../../../utils/templator.js";
-import { userSettings, user } from './user.tmpl.js';
+import Templator from '../../../../utils/templator';
+import { userSettings, user } from './user.tmpl';
 
 
 export const renderedUser = new Templator(user);

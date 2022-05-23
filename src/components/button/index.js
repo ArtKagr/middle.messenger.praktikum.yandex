@@ -1,5 +1,5 @@
-import renderedButton from './button.js';
-import renderedLink from '../link/link.js';
+import renderedButton from './button';
+import renderedLink from '../link/link';
 
 const authButtonContext = { className: 'auth-button', text: 'ВХОД' };
 const authButtonFakeContext = { className: 'auth-button', linkName: '/chats', targetName: '', text: 'ВХОД' };

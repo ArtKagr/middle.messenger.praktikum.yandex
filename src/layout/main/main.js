@@ -1,4 +1,4 @@
-import Templator from "../../utils/templator.js";
-import layoutTemplate from './main.tmpl.js';
+import Templator from '../../utils/templator';
+import layoutTemplate from './main.tmpl';
 
 export default new Templator(layoutTemplate);

@@ -1,5 +1,5 @@
-import Templator from "../../utils/templator.js";
-import formTemplate from './form.tmpl.js';
+import Templator from '../../utils/templator';
+import formTemplate from './form.tmpl';
 
 const tmpl = new Templator(formTemplate);
 

@@ -1,5 +1,5 @@
-import Templator from "../../utils/templator.js";
-import chatsTemplate from './chats.tmpl.js';
+import Templator from '../../utils/templator';
+import chatsTemplate from './chats.tmpl';
 
 const tmpl = new Templator(chatsTemplate);
 

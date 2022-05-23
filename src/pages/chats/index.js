@@ -1,4 +1,4 @@
-import renderedChats from "./chats.js";
+import renderedChats from './chats';
 
 const chatsContext = {
     wrapper: { className: 'chats' },

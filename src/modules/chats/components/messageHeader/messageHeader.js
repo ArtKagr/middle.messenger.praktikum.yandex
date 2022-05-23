@@ -1,5 +1,5 @@
-import Templator from "../../../../utils/templator.js";
-import messageHeaderTemplate from './messageHeader.tmpl.js';
+import Templator from '../../../../utils/templator';
+import messageHeaderTemplate from './messageHeader.tmpl';
 
 const tmpl = new Templator(messageHeaderTemplate);
 

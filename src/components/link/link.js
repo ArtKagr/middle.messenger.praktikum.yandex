@@ -1,5 +1,5 @@
-import Templator from "../../utils/templator.js";
-import linkTemplate from './link.tmpl.js';
+import Templator from '../../utils/templator';
+import linkTemplate from './link.tmpl';
 
 const tmpl = new Templator(linkTemplate);
 

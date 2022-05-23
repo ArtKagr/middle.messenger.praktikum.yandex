@@ -1,5 +1,5 @@
 import renderedInput from '../input/input.js';
-import { state } from "../../../store/index.js";
+import { state } from '../../store';
 
 const authInputsContext = [
     { inputClass: 'chats-input', inputValue: state.settings.auth.login, inputPlaceholder: 'E-mail', inputType: 'email' },
@@ -17,7 +17,7 @@ const regInputsContext = [
     { inputClass: 'chats-input', inputValue: state.settings.registration.repeat_password, inputPlaceholder: 'Повторите пароль', inputType: 'password' }
 ];
 
-const searchInputContext = { inputClass: 'chats-input-search', inputValue: '', inputPlaceholder: 'Поиск', inputType: 'text' }
+const searchInputContext = { inputClass: 'chats-input-search', inputValue: '', inputPlaceholder: 'Поиск', inputType: 'text' };
 
 export const authInputs = renderedInput.compileArray(authInputsContext);
 export const regInputs = renderedInput.compileArray(regInputsContext);

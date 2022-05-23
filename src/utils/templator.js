@@ -1,4 +1,4 @@
-import {get} from "./get.js";
+import { get } from './get';
 
 export default class Templator {
     VALUE_TEMPLATE_REGEXP = /\{\{(.*?)\}\}/gi;

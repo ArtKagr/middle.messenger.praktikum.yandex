@@ -1,4 +1,4 @@
-import renderedMessageField from './messageField.js';
+import renderedMessageField from './messageField';
 
 const context = {
     messageField: 'message-field',

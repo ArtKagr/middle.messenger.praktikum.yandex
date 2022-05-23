@@ -1,5 +1,5 @@
-import { renderedUser, renderedUserSettings } from './user.js';
-import { state } from '../../../../../store/index.js';
+import { renderedUser, renderedUserSettings } from './user';
+import { state } from '../../../../store';
 
 const userSettingsContext = {
     userClassName: 'chats-menu-settings-user_settings',

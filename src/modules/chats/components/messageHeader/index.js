@@ -1,4 +1,4 @@
-import renderedMessageHeader from './messageHeader.js';
+import renderedMessageHeader from './messageHeader';
 
 const context = {
     messageHeader: 'message-header',

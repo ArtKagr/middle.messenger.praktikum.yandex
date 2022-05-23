@@ -1,4 +1,4 @@
-import renderedLayout from './main.js';
+import renderedLayout from './main';
 
 const context = {
     block: { className: 'layout' },
