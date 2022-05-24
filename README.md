@@ -33,12 +33,12 @@
 
 ## Figma
 
-```https://www.figma.com/file/8LlwdhYMLkYS1JkfFfYu0T/Спринт-1?node-id=0%3A1```
+[Ссылка](https://www.figma.com/file/8LlwdhYMLkYS1JkfFfYu0T/Спринт-1?node-id=0%3A1)
 
 ## Netlify
 
-```https://profound-kashata-b29c20.netlify.app/```
+[Ссылка](https://profound-kashata-b29c20.netlify.app/)
 
 ## Pull request:
 
-  * 1 спринт - ``````
+[Ссылка]()
