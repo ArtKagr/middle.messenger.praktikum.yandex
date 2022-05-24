@@ -1,4 +1,14 @@
 .idea
 node_modules
 .parcel-cache
-dist
+.cache
+.vscode
+.module-cache
+.DS_Store
+jspm_packages/
+*.swp
+*.log
+atlassian-ide-plugin.xml
+.eslintcache
+node_modules/
+*.lock
